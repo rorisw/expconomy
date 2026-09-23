@@ -28,7 +28,7 @@ jobs:
         run: ./gradlew shadowJar --no-daemon
 
       - name: Publish release
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           files: build/libs/Expconomy-*.jar
           generate_release_notes: true
