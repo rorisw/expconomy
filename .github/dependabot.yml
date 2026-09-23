@@ -7,7 +7,7 @@ updates:
     open-pull-requests-limit: 5
     ignore:
       # We compile against the oldest Paper we support (1.21.4) so we can't
-      # use newer API by accident. Paper 26+ also needs Java 25, which would
+      # use newer API by accident. Paper 26.x also needs Java 25, which would
       # drop every Java 21 server. Raise this by hand when support changes.
       - dependency-name: "io.papermc.paper:paper-api"
 
