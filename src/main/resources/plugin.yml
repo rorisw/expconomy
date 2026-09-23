@@ -3,7 +3,7 @@ main: dev.melishy.expconomy.Expconomy
 version: '${version}'
 description: XP based economy for Paper. Inspired by XPConomy.
 author: Melishy
-website: https://github.com/rorisw/Expconomy
+website: https://github.com/rorisw/expconomy
 api-version: '1.21'
 load: STARTUP
 softdepend: [Vault, PlaceholderAPI]
