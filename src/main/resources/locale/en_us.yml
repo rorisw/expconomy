@@ -1,0 +1,79 @@
+# Expconomy locale: English (United States)
+# Messages support legacy ampersand color codes (&a, &6, &#RRGGBB) and
+# MiniMessage tags (<gold>, <gradient:...>). Placeholders use {0}, {1}, ...
+language:
+  name: English
+  region: United States
+  code: en_us
+version: 1
+
+# Currency unit shown by Vault.
+currency: EXP
+currency-plural: EXP
+
+prefix: "&6Exp&economy &8» "
+
+console:
+  player-only: "This command can only be run by a player."
+  reloaded: "Expconomy reloaded."
+
+command:
+  unknown: "&fUnknown command. Type &6/xpc help&f for help."
+  reloaded: "&aExpconomy reloaded."
+  disabled: "&cThat feature is disabled on this server."
+
+balance:
+  self: "&fYou have &6{0} &fEXP."
+  other: "&e{0} &fhas &6{1} &fEXP."
+
+give:
+  sent: "&fYou gave &6{0} &fEXP to &e{1}&f."
+  received: "&fYou received &6{0} &fEXP from &e{1}&f."
+  self: "&cYou can't give EXP to yourself."
+  insufficient: "&cYou don't have enough EXP."
+
+admin:
+  added: "&fAdded &6{0} &fEXP to &e{1}&f's balance."
+  added-target: "&6{0} &fEXP was added to your balance."
+  removed: "&fRemoved &6{0} &fEXP from &e{1}&f's balance."
+  removed-target: "&6{0} &fEXP was removed from your balance."
+  set: "&fSet &e{0}&f's balance to &6{1} &fEXP."
+  set-target: "&fYour balance was set to &6{0} &fEXP."
+
+bank:
+  balance: "&fYour bank holds &6{0} &fEXP."
+  balance-other: "&e{0}&f's bank holds &6{1} &fEXP."
+  deposited: "&fDeposited &6{0} &fEXP. Bank now holds &6{1} &fEXP."
+  withdrew: "&fWithdrew &6{0} &fEXP. Bank now holds &6{1} &fEXP."
+  insufficient-balance: "&cYou don't have that much EXP to deposit."
+  insufficient-bank: "&cYour bank doesn't hold that much EXP."
+  overflow: "&cCould not fit all that EXP, your bank is nearly full."
+  full: "&cYour bank is already full."
+
+top:
+  header: "&8&m---&r &6EXP Leaderboard &8(&e{0}&8/&e{1}&8) &m---"
+  entry: "&8{0}. &e{1} &7- &6{2} &fEXP"
+  footer: "&8&m------------------------"
+  empty: "&7No balances recorded yet."
+
+error:
+  negative-amount: "&cAmount must be positive."
+  invalid-amount: "&cThat isn't a valid amount."
+  unknown-player: "&cUnknown player."
+  balance: "&cCould not read that balance."
+  max-balance: "&cThat would exceed the maximum balance."
+
+help:
+  header: "&6Expconomy commands:"
+  exp: "&6/xpc &8- &fShow your EXP balance."
+  balance: "&6/xpc balance [player] &8- &fShow a balance."
+  give: "&6/xpc give <player> <amount> &8- &fGive EXP to a player."
+  pay: "&6/xpc pay <player> <amount> &8- &fSame as give."
+  top: "&6/xpc top [page] &8- &fShow the leaderboard."
+  deposit: "&6/xpc deposit <amount> &8- &fPut EXP in your bank. Banked EXP doesn't drop on death."
+  withdraw: "&6/xpc withdraw <amount> &8- &fTake EXP out of your bank."
+  bank: "&6/xpc bank [player] &8- &fShow a bank balance."
+  add: "&6/xpc add <player> <amount> &8- &fAdd EXP to a player."
+  remove: "&6/xpc remove <player> <amount> &8- &fRemove EXP from a player."
+  set: "&6/xpc set <player> <amount> &8- &fSet a player's EXP."
+  reload: "&6/xpc reload &8- &fReload the config."

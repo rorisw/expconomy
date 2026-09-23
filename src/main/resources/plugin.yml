@@ -1,0 +1,63 @@
+name: Expconomy
+main: dev.melishy.expconomy.Expconomy
+version: '${version}'
+description: XP based economy for Paper. Inspired by XPConomy.
+author: Melishy
+website: https://github.com/rorisw/Expconomy
+api-version: '1.21'
+load: STARTUP
+softdepend: [Vault, PlaceholderAPI]
+
+commands:
+  xpc:
+    description: Check, send and bank your XP.
+    usage: "/xpc help"
+    aliases: [expconomy]
+
+permissions:
+  exp.balance:
+    description: View your own XP balance.
+    default: true
+  exp.balance.others:
+    description: View another player's XP balance.
+    default: op
+  exp.give:
+    description: Give your XP to another player (/xpc give).
+    default: true
+  exp.pay:
+    description: Give your XP to another player (/xpc pay).
+    default: true
+  exp.top:
+    description: View the XP leaderboard.
+    default: true
+  exp.help:
+    description: View the help text.
+    default: true
+  exp.bank:
+    description: Use your personal XP bank (deposit, withdraw, balance).
+    default: true
+  exp.bank.others:
+    description: View another player's bank balance.
+    default: op
+  exp.add:
+    description: Add XP to a player.
+    default: op
+  exp.remove:
+    description: Remove XP from a player.
+    default: op
+  exp.set:
+    description: Set a player's XP.
+    default: op
+  expconomy.reload:
+    description: Reload the config (/xpc reload).
+    default: op
+  exp.admin:
+    description: Grants all admin XP permissions.
+    default: op
+    children:
+      exp.add: true
+      exp.remove: true
+      exp.set: true
+      exp.balance.others: true
+      exp.bank.others: true
+      expconomy.reload: true

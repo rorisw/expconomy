@@ -1,0 +1,55 @@
+name: Bug report
+description: Report something that isn't working
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for the report. Please fill out the details below so it can be reproduced.
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened
+      description: A clear description of the bug.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Run '/xpc ...'
+        2. ...
+        3. See the error
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: input
+    id: server-version
+    attributes:
+      label: Server software and version
+      placeholder: "Paper 1.21.4"
+    validations:
+      required: true
+  - type: input
+    id: plugin-version
+    attributes:
+      label: Expconomy version
+      placeholder: "1.0.0"
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Console output / stack trace
+      description: Paste relevant logs. Use a paste service for long output.
+      render: text
+  - type: textarea
+    id: other-plugins
+    attributes:
+      label: Other relevant plugins
+      description: Vault, PlaceholderAPI, economy plugins, anything that touches XP.
