@@ -1,0 +1,86 @@
+# Expconomy: an XP economy for Paper 1.21.4+
+#
+#  - Run /xpc reload after editing this file.
+#  - Messages are in locale/<code>.yml.
+#  - For caps, 0 means unlimited.
+
+# Used to migrate old configs. Don't change it.
+config-version: 1
+
+
+# ---------------------------------------------------------------
+#  General
+# ---------------------------------------------------------------
+general:
+  # Locale file name from the locale/ folder, without .yml.
+  locale: en_us
+
+
+# ---------------------------------------------------------------
+#  Features
+#  Turn off a feature and its commands disappear from tab
+#  completion and tell players it's disabled.
+# ---------------------------------------------------------------
+features:
+  # /xpc give and /xpc pay.
+  give: true
+
+  # /xpc top.
+  leaderboard: true
+
+  # /xpc deposit, /xpc withdraw and /xpc bank.
+  bank: true
+
+
+# ---------------------------------------------------------------
+#  Integrations
+# ---------------------------------------------------------------
+integrations:
+  # Register Expconomy as the Vault economy provider.
+  vault: true
+
+  # Hook into PlaceholderAPI (%expconomy_balance% and friends).
+  placeholderapi: true
+
+
+# ---------------------------------------------------------------
+#  Balance
+# ---------------------------------------------------------------
+balance:
+  # Maximum XP a player can hold. 0 = unlimited.
+  maximum: 0
+
+  # Number format for displayed balances (Java DecimalFormat).
+  #   "#,##0"  ->  1,234        "0"  ->  1234
+  # Use '@' as the grouping separator to disable grouping entirely.
+  decimal-format: "#,##0"
+
+
+# ---------------------------------------------------------------
+#  Bank          (used only when features.bank is true)
+# ---------------------------------------------------------------
+bank:
+  # Maximum XP a player can keep banked. 0 = unlimited.
+  maximum: 0
+
+
+# ---------------------------------------------------------------
+#  Death
+# ---------------------------------------------------------------
+death:
+  # When true, Expconomy decides the XP drop and players respawn with the rest.
+  # When false, vanilla rules apply and drop-percentage is ignored.
+  # keepInventory always wins: players keep all their XP.
+  modify-drops: true
+
+  # Percentage (0-100) of a player's XP that drops as orbs on death.
+  # Banked XP never drops.
+  drop-percentage: 10
+
+
+# ---------------------------------------------------------------
+#  Leaderboard   (used only when features.leaderboard is true)
+# ---------------------------------------------------------------
+leaderboard:
+  # How many entries /xpc top shows per page.
+  page-size: 10
